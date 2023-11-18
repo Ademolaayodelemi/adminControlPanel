@@ -1,0 +1,255 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  min-height: 60px;
+  z-index: 990;
+  top: 0;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // margin-bottom: 10px;
+
+ 
+  .topbarWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+
+    .left {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 16%;
+      // gap: 10px;
+      
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+
+      .item {
+        position: relative;
+        margin-right: 20px;
+        cursor: pointer;
+
+        .icon {
+            font-size: 22px;
+            color: grey;
+            
+            // transition: all .4s ease-in-out;
+        }
+
+        .notificationContainer,
+        .mailContainer {
+          position: absolute;
+          background: #fff;
+          width: 320px;
+          color: #252525;
+          top: 35px;
+          right: -50px;
+          box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+          
+          // padding:10px 0;
+          // border-right: 2px solid #e7e7e7;
+          // visibility: hidden;
+          // opacity: 0;
+          // right: 0;
+          // transform: translateY(50px);
+          transition: all .4s ease-in-out;
+
+          
+          
+          ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border: 1px solid #e7e7e7;
+           
+
+            .noticationTop,
+            .mailTop {
+              font-size: 13px;
+              font-family: Montserrat, sans-serif;
+              color: #252525;
+              padding: 20px 15px;
+              border-top: 1px solid #e7e7e7 ;
+              border-bottom: 1px solid #e7e7e7 ;
+              text-align: left;
+            }
+            
+            // li {  
+              
+              
+              
+              .noticationContent,
+              .mailContent {
+                padding: 15px 15px;
+                border-bottom: 1px solid #e7e7e7;
+
+                &:hover,
+                &:focus {
+                  background: #eef1f6;
+                  border-top: 1px solid #eef1f6
+                }
+
+
+
+
+                .notificationHeadWrapper,
+                .mailHeadWrapper{
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                 
+    
+                  .avatar-img {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                  }
+                  
+                  .notificationHead,
+                  .mailHead {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    .notificationTimestamp,
+                    .mailTimestamp {
+                      font-size: 11px;
+                    }
+
+                    span {
+                      font-size: 13px;
+                      font-weight: 700;
+                      color: #252525;
+                    }
+                  }
+                }
+
+               
+
+                .notificationText,
+                .mailText {
+                  width: 68%;
+                  margin-left: 35px;
+                  font-size: 12px;
+                  font-family: MontserratLight, sans-serif;
+                  max-width: 100%;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  
+                  // padding-top: 3px;
+                }
+              }
+
+            // }
+
+            .noticationBottom,
+            .mailBottom {
+              font-size: 13px;
+              font-family: Montserrat, sans-serif;
+              padding: 10px 15px;
+              text-align: center;
+              border-bottom: 1px solid #e7e7e7 ;
+              position: relative;
+              top: 5px;
+              color: #03a9f5
+            }
+           
+          }
+        }
+
+        .profile {
+          display: flex;
+          align-items: center;
+
+          span {
+            font-size: 14px;
+            font-weight: 700;
+          }
+
+          .avatar-img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 7px;
+          }
+
+         
+        }
+
+        .profileDropdown {
+          position: absolute;
+          background: #fff;
+          width: 200px;
+          color: #252525;
+          top: 35px;
+          right: -30px;
+          box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+          
+          // padding:10px 0;
+          // border-right: 2px solid #e7e7e7;
+          // visibility: hidden;
+          // opacity: 0;
+          // right: 0;
+          // transform: translateY(50px);
+          transition: all .4s ease-in-out;
+
+
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+              
+            .dropdownTop, li {
+              padding: 10px 15px;
+              border-bottom: 1px solid #e7e7e7;
+            }
+
+            .dropdownTop {
+              font-size: 13px;
+              font-family: Montserrat, sans-serif;
+              color: #252525;
+              padding: 20px 15px;
+              border-top: 1px solid #e7e7e7 ;
+              border-bottom: 1px solid #e7e7e7 ;
+              text-align: left;
+            }
+
+            li {
+              display: flex;
+                align-items: center;
+                gap: 10px;
+
+              &:hover,
+              &:focus {
+                background: #eef1f6;
+                border-top: 1px solid #eef1f6
+              }
+
+                .profileIcon, span {
+                  font-size: 14px
+                }
+
+
+            }
+          }
+          
+        }
+      }
+    }
+
+    
+  }
+  
+
+}

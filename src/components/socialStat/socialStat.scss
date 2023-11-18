@@ -1,0 +1,62 @@
+.socialStat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // flex: 1; // if you are using flex: 1; remmber to disable the "flex-wrap: wrap" in socialStatWrapper in home
+  width: 750px;
+  height: 310px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  
+  .socialTitle {
+    font-size: 18px;
+    color: #555;
+    font-family: Montserrat, sans-serif;
+    font-family: 100;
+    margin: 0 0 10px 5px;
+  }
+
+  .socialTop,
+  .socialBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    & .border {
+      border-right: 1px solid rgb(231, 231, 231);
+    }
+
+    .socialItem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #252525;
+      gap: 10px;
+      flex: 1;
+      height: 125px;
+      padding: 30px 8px;
+      text-align: center;
+      
+      & :first-child {
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      & :last-child {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .socialTop {
+    border-bottom: 1px solid rgb(231, 231, 231);
+  }
+}
+

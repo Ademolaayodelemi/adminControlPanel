@@ -1,0 +1,47 @@
+.bar {
+  display: flex;
+  align-items: center;
+  padding: 14px 15px;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+    .left {
+      font-weight: 500;
+      color: #000;
+
+       .title {
+        font-size: 18px;
+        
+       }
+
+       .text {
+        font-size: 14px;
+        margin-left: 5px;
+       }
+    }
+    
+
+    .right {
+      display: flex;
+      gap: 5px;
+
+      .breadcrumbTitle {
+        font-size: 12px;
+        color: #000;
+        font-family: MontserratLight, sans-serif;
+        cursor: pointer;
+        
+      }
+      .breadcrumbLine {
+        font-size: 12px;
+        font-family: MontserratLight, sans-serif;
+      }
+      .breadcrumb {
+        color: #777;
+        font-size: 12px;
+        font-family: MontserratLight, sans-serif;
+      }
+    }
+}

@@ -1,0 +1,79 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+  width: 86%;
+  // height: calc(100vh - 55px);
+  // height: 100%; // sometimes it's better not to specify the height, because specifying the height might cut some bottom part
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  padding-bottom: 20px !important;
+  padding-right: 26px;
+  z-index: 200;
+  color: #878787;
+  // color: #555;
+  top: 70px;
+  left: 14.7%;
+
+  .widgetWrapper {
+    display: flex;
+  // justify-content: space-between;
+    gap: 15px;
+  }
+
+  .chartWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .socialStatWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .socialTableWrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .socialCompilation {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .socialCardWrapper {
+      flex: 1;
+      height: 380px;
+      box-sizing: border-box;
+      // overflow: hidden;
+      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+      // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  .informationWrapper {
+    display: flex;
+    gap: 15px;
+  }
+
+  .todoTimelineprofileWrapper {
+    display: flex;
+    gap: 15px;
+  }
+
+ 
+}
+
+
+
+

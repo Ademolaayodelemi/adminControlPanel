@@ -1,0 +1,127 @@
+.todoCard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  height: 442px;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  background-color: #fff;
+
+  .headerTitle {
+    font-size: 14px;
+    color: #252525;
+    margin: 0 0 10px;
+    // text-align: center;
+  }
+  .contentWrapper {
+    overflow: auto;
+    
+    .contentContainer {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #e7e7e7;
+      // padding: 15px 15px;
+      cursor: pointer;
+
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      &:hover {
+        // background-color: #f1f1f1;
+        background-color: #eef1f6;
+      }
+
+      .todoLabel {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+        color: #252525;
+        width: 100%;
+        height: 100%;
+        padding: 15px 10px;
+        
+        .checkmark {
+          position: relative;
+          display: inline-block;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 15px;
+          border: 1px solid #e7e7e7;
+          background-color: #fff;
+          
+          .checkIcon {
+            display: none;
+            position: absolute;
+            color: #252525;
+            top: -6px;
+            left: -2px;
+          }
+        }
+
+        input[type="checkbox"]:checked ~.checkmark .checkIcon {
+          display: block;
+        }
+
+        input[type="checkbox"]:checked ~.todoTask {
+          text-decoration: line-through;
+        }
+
+        
+      }
+
+      .closeIcon {
+        font-size: 30px;
+        color: #757575;
+        padding-right: 10px;
+        display: none;
+        cursor: pointer;
+      }
+
+      &:hover .closeIcon {
+        display: inline-block;
+      }
+
+    }
+  }
+
+  .emptyTodo {
+    display: flex;
+      align-items: center;
+      font-size: 15px;
+      color: #777;
+      padding: 15px 10px;
+      padding-left: 50px;
+      background-color: #eef1f6;
+
+  }
+
+  .inputContainer {
+    margin-top: 40px;
+
+    input[type="text"] {
+      width: 100%;
+      padding: 20px 20px;
+      background-color: #eef1f6;
+      border: none;
+
+      &:focus {
+        outline: none;
+        border: 1px solid #757575;
+        // background-color: lightblue;
+      }
+    }
+
+  }
+
+
+}

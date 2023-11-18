@@ -1,0 +1,22 @@
+.socialTable {
+  flex: 1;
+  height: 320px;
+  background-color: #fff;
+  // background-color: aqua;
+  box-sizing: border-box;
+  // padding: 5px;
+  // overflow: hidden;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+  .tableWrapper {
+    // max-height: 0px;
+
+    .tableHead {
+      // font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  
+}
