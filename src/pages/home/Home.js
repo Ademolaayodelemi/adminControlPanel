@@ -21,6 +21,10 @@ import ActivityChart from "../../components/activityChart/ActivityChart";
 import NewsFeed from "../../components/newsFeed/NewsFeed";
 import TodoCard from "../../components/todoCard/TodoCard";
 import TimelineCard from "../../components/timelineCard/TimelineCard";
+import ProfileCalender from "../../components/profileCalender/ProfileCalender";
+import EnrolmentAnalytics from "../../components/enrolmentAnalytics/EnrolmentAnalytics";
+import RegistrationOverview from "../../components/registrationOverview/registrationOverview";
+import NewApplicants from "../../components/newApplicants/NewApplicants";
 
 
 const Home = () => {
@@ -66,7 +70,14 @@ const Home = () => {
       <div className="todoTimelineprofileWrapper">
         <TodoCard title='Todo'/>
         <TimelineCard title='Timeline'/>
-        <TodoCard title='Todo'/>
+        <ProfileCalender/>
+      </div>
+      <div className="analyticsWrapper">
+        <EnrolmentAnalytics title='Enrolment Analysis'/>
+        <RegistrationOverview title='Registration Overview'/>
+      </div>
+      <div className="newApplicantsWrapper">
+        <NewApplicants title='New Applicants'/>
       </div>
       
     </div>

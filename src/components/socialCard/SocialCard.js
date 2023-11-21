@@ -1,6 +1,7 @@
 import { AccountBalanceWalletOutlined, ArrowDownward, ArrowUpward, EmojiEventsOutlined, HighlightOffOutlined, ListOutlined, SettingsOutlined, SyncOutlined, TrendingUpOutlined, UpgradeOutlined } from "@mui/icons-material";
 import "./socialCard.scss";
 import CircularProgress from '@mui/material/CircularProgress';
+import { makeStyles } from '@mui/styles';
 
 let data;
 const SocialCard = ({type}) => {
@@ -66,13 +67,16 @@ const SocialCard = ({type}) => {
           {/* <div className='progress'>circlelar</div> */}
           <CircularProgress 
           sx={{
-            color: '#1de9b6'
+            color: '#1de9b6',
+            // borderStyle: 'solid',
+            // borderImage: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+            // borderImageSlice: 1
           }}
           variant="determinate" 
           value={data.progressValue} 
           size={100} 
-          className="progress"
           thickness={4}
+          className="progress"
           >
           </CircularProgress>
           {/* <EmojiEventsOutlined className="icon"/> */}

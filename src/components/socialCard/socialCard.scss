@@ -85,6 +85,17 @@
         justify-content: center;
         align-items: center;
 
+        // .css-1p43cna-MuiCircularProgress-root {
+          // color: red;
+          
+          //border-width: 2px; /* Set the width of the border */
+          //border-style: solid; /* Set the border style to solid */
+          // border-image: linear-gradient(red, yellow);
+          //border-image: linear-gradient(to right, #ff0000, #00ff00); /* Define the gradient colors */
+          //border-image-slice: 1; /* Slice the border image into 9 pieces (1 for each side and 4 for corners) */
+
+        // }
+
       .progress {
         position: absolute;
         left: -8px;
@@ -148,3 +159,6 @@
     }
   }
 }
+
+
+  

@@ -9,7 +9,7 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  overflow-x: hidden;
+  overflow-x: auto;
   padding-bottom: 20px !important;
   padding-right: 26px;
   z-index: 200;
@@ -33,7 +33,7 @@
   
   .socialStatWrapper {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; // Only enable this if you are not using "flex: 1;" in ".socialStat" in  "socialStat.scss"
     align-items: center;
     gap: 15px;
   }
@@ -65,8 +65,18 @@
     display: flex;
     gap: 15px;
   }
-
+  
   .todoTimelineprofileWrapper {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .analyticsWrapper {
+    display: flex;
+    gap: 15px;
+  } 
+
+  .newApplicantsWrapper {
     display: flex;
     gap: 15px;
   }

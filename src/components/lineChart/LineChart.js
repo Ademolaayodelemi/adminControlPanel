@@ -120,10 +120,10 @@ const Chart = () => {
           <Tooltip />
           <Legend />
           {/* Note: feel free to remove the stackId (stackId="1") on each line if they(gg, bb, pp, yy) are too dependent on others */}
-          <Line type="monotone" dataKey="gg" stackId="1" stroke="#1de9b6" strokeWidth={4} />
-          <Line type="monotone" dataKey="bb" stackId="1" stroke="#03A9F5" strokeWidth={4} />
-          <Line type="monotone" dataKey="pp" stackId="1" stroke="#8884d8" strokeWidth={4} activeDot={{ r: 1 }} />
-          <Line type="monotone" dataKey="yy" stackId="1" stroke="#f4c22b" strokeWidth={4} />
+          <Line type="monotone" dataKey="gg" stackId="1" stroke="#1de9b6" fill="#1de9b6" strokeWidth={4} />
+          <Line type="monotone" dataKey="bb" stackId="1" stroke="#03A9F5" fill="#03A9F5" strokeWidth={4} />
+          <Line type="monotone" dataKey="pp" stackId="1" stroke="#8884d8" fill="#8884d8" strokeWidth={4} activeDot={{ r: 1 }} />
+          <Line type="monotone" dataKey="yy" stackId="1" stroke="#f4c22b" fill="#f4c22b" strokeWidth={4} />
         </LineChart>
       </ResponsiveContainer>
     </div>
