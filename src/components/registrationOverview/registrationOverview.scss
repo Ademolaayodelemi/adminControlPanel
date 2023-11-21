@@ -1,0 +1,20 @@
+.registrationOverview {
+  // display: flex;
+  flex: 1;
+  // width: 100%;
+  height: 450px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+  .registrationTitle {
+    font-size: 18px;
+    color: #555;
+    font-family: Montserrat, sans-serif;
+    font-family: 100;
+    margin: 0 0 20px 23px;
+  }
+}
+

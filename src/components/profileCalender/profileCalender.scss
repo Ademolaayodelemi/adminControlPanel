@@ -1,0 +1,61 @@
+$myFont: Montserrat, sans-serif;
+$myColorB: #03a9f5;
+$myColorY: #f39c12;
+$myColorR: #e74c3c;
+$myColorG: #1de9b6;
+
+$myFontSize: 18px;
+$myWidth: 680px;
+$myBackground: #fff !global;
+
+
+.profileCalender {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 442px;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  background-color: #fff;
+
+  .calender {
+    color: #e74c3c;
+    width: 400px;
+  }
+
+
+
+ 
+  // .css-1q04gal-MuiDateCalendar-root {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   overflow: hidden;
+  //   width: 100%;
+  //   max-height: 100%;
+  //   margin: 0 auto;
+  //   background-color: #1de9b6;
+    
+    
+  //   .css-12p2adl-MuiDayCalendar-monthContainer {
+  //     background-color: #e74c3c;
+  //     gap: 50px;
+      
+  //     .css-1u23akw-MuiButtonBase-root-MuiPickersDay-root {
+  //       background-color: #1de9b6;
+  //       border-radius: 0;
+  //       margin: 0 2px;
+  //     }
+  //   }
+    
+  // }
+
+  // .tester {
+  //   width: 100%;
+  //   height: 100%;
+  //   background-color: lightgreen;
+  //   font-size: 50px;
+  // }
+}
