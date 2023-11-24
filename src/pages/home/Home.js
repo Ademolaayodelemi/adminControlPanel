@@ -77,7 +77,7 @@ const Home = () => {
         <RegistrationOverview title='Registration Overview'/>
       </div>
       <div className="newApplicantsWrapper">
-        <NewApplicants title='New Applicants'/>
+        <NewApplicants title='Recent Applicants'/>
       </div>
       
     </div>

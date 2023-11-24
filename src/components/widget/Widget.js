@@ -83,7 +83,6 @@ const Widget = ({type}) => {
 
       
   }
-console.log(data.title)
   return (
     <div className='widget'>
       <div className="top">

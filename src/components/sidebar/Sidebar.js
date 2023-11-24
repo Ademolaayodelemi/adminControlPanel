@@ -42,7 +42,7 @@ const Sidebar = () => {
             <div className="listItemMenu " >
               <div className="leftContent">
                 <HomeOutlined className="icon"/>
-                <NavLink to='1' ><span>Dashboard</span></NavLink>
+                <NavLink to='/' ><span>Dashboard</span></NavLink>
               </div>
               <div className="rightContent">
                 <span className="itemBadge">6</span>

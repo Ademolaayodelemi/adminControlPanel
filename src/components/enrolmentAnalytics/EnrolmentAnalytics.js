@@ -68,7 +68,7 @@ const EnrolmentAnalytics = ({title}) => {
             top: 5,
             right: 0,
             left: 0,
-            bottom: 30,
+            bottom: 20,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
