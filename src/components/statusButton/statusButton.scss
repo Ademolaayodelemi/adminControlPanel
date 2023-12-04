@@ -1,0 +1,27 @@
+$myColorB: #03a9f5;
+$myColorY: #f39c12;
+$myColorR: #e74c3c;
+$myColorG: #1de9b6;
+$myFont: Montserrat, sans-serif;
+$myFont2: MontserratLight, sans-serif;
+
+.statusButton {
+  color: #fff;
+  border: 0;
+  padding: 2px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+}
+  
+  .statusButton.COMPLETE {
+    background-color: $myColorG;
+  }
+
+  .statusButton.PENDING {
+    background-color: $myColorY;
+  }
+
+  .statusButton.REJECTED {
+    background-color: $myColorR;
+  }
+

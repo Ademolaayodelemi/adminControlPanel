@@ -15,24 +15,29 @@
   z-index: 200;
   color: #878787;
   // color: #555;
-
+  // transition: all 0.3s ease-in-out;
+  
   a {
     text-decoration: none;
     display: block;
-    width: 100%;
+    // width: 100%;
     color: inherit;
-    transition: all 0.3s ease-in-out;
-
+    
     &:hover,
     &.active {
       color: #03a9f5;
       background-color: #f1f1f1;
+      border-left: 4px solid #03a9f5;
+      transition: all 0.1s ease-in-out;
     }
+    
+    // &.active span:first-child {
+    //   color: #03a9f5;
+      
+    // }
   }
 
-
   .sidebarWrapper {
-   
     
     .list {
       list-style-type: none;
@@ -50,27 +55,26 @@
         text-transform: uppercase;
         font-weight: normal;
       }
-      
-
 
       .listItem {
-        
+        // height: max-content;
 
         .listItemMenu {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 10px 20px;
+          padding: 10px 20px 10px 20px;
           // gap: 10px;
-          box-sizing: border-box;
           cursor: pointer;
-          transition: all .4s ease-in-out;
-
-          &:hover,
-          &.active {
-            color: #03a9f5;
-            background-color: #f1f1f1;
-          }
+          transition: all 0.3s ease-in-out;
+          box-sizing: border-box;
+          
+          // &:hover,
+          // &.active {
+          //   color: #03a9f5;
+          //   background-color: #f1f1f1;
+          //   border-left: 4px solid #03a9f5;
+          // }
 
           .leftContent,
           .rightContent {
@@ -78,15 +82,17 @@
             align-items: center;
             gap: 10px;
           }
-
         }
-        
+
+        // Note(as important): any  time the dropdown menu dropped/shown the "data-bs-toggle" from the bootstrap injects "[aria-expanded="true"]" into the div with 
+        // listItemMenu. So I decided to borrow/use it to add style to ".leftContent" whenever any of the "listItemMenu" children is active
+        div.listItemMenu[aria-expanded="true"] .leftContent {
+          color: #03a9f5;
+        }
 
         .icon {
           font-size: 20px;
-        
         }
-
         
         .itemBadge {
           position: relative;
@@ -101,29 +107,33 @@
           font-size: 16px;
           margin-left: -6px;
           cursor: pointer;
+        }
 
-          // transform: rotate(180deg); //Use this to rotate arrow up on dropdown
-          
+        // Note(as important): any  time the dropdown menu dropped/shown the "data-bs-toggle" from the bootstrap injects "[aria-expanded="true"]" into the div with 
+        // listItemMenu. So I decided to borrow/use that to determine when the arrow will rotate.
+        div.listItemMenu[aria-expanded="true"] .arrowDownIcon {
+          transform: rotate(-180deg); //Use this to rotate arrow up on dropdown
+          transition: transform 0.3s ease-in-out;
         }
 
         .dropdownList {
           list-style-type: none;
           padding: 0px;
           margin: 0;
+          // overflow-y: hidden;
           // display: none;
-
+          // height: calc(50px);
+          // height: 1px;
+          transition: height 0.3s ease-in-out;
+          // transition: all 4s ease-in-out;
           
           .dropdownListItem {
             padding: 10px 60px;
-            transition: all .4s ease-in-out;
-           
-
 
             // &:hover,
             // &.active {
             //   color: #03a9f5;
             // }
-           
           }
         }
       }

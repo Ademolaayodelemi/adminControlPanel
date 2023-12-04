@@ -1,0 +1,64 @@
+$myFont: Montserrat, sans-serif;
+$myColorB: #03a9f5;
+$myColorY: #f39c12;
+$myColorR: #e74c3c;
+$myColorG: #1de9b6;
+
+.studentWidgets {
+  display: flex;
+  gap: 15px;
+
+  & .studentWidgetItem:first-child {
+    background-color: $myColorB;
+  }
+  
+  & .studentWidgetItem:nth-child(2) {
+    background-color: $myColorR;
+  }
+  & .studentWidgetItem:nth-child(3) {
+    background-color: $myColorG;
+  }
+  & .studentWidgetItem:last-child {
+    background-color: $myColorY;
+  }
+
+  .studentWidgetItem {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    height: 105px;
+    padding: 20px;
+    color: #fff;
+    // background-color: $myColorB;
+
+    .studentWidgetItemLeft {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-top: -15px;
+      height: 100%;
+      font-size: 14px;
+      font-weight: 500;
+
+      .studentWidgetIcon {
+        font-size: 30px;
+        // font-weight: 500;
+      }
+    }
+
+    .widgetDivider {
+      font-size: 40px;
+      font-weight: 100;
+    }
+
+    .studentWidgetItemRight {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 30px;
+      // padding-left: 30px;
+    }
+  }
+}

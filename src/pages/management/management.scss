@@ -1,0 +1,29 @@
+$myFont: Montserrat, sans-serif;
+$myColorB: #03a9f5;
+$myColorY: #f39c12;
+$myColorR: #e74c3c;
+$myColorG: #1de9b6;
+
+$myFontSize: 18px;
+$myWidth: 680px;
+$myBackground: #fff !global;
+
+.management {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 86%;
+    // height: calc(100vh - 55px);
+    // height: 100%; // sometimes it's better not to specify the height, because specifying the height might cut some bottom part
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    overflow-x: auto;
+    padding-bottom: 20px !important;
+    padding-right: 26px;
+    z-index: 200;
+    // color: #878787;
+    // color: #555;
+    top: 70px;
+    left: 14.7%;
+}

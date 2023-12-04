@@ -61,9 +61,10 @@ const SocialCard = ({type}) => {
           </li>
         </ul>
       </div>
+
       <div className="cardMiddle">
         <div className="upperFigure">{data.totalFigure}</div>
-        <div className="cardCircle">
+        <div className="innerCardCircle ">
           {/* <div className='progress'>circlelar</div> */}
           <CircularProgress 
           sx={{
@@ -76,13 +77,14 @@ const SocialCard = ({type}) => {
           value={data.progressValue} 
           size={100} 
           thickness={4}
-          className="progress"
+          className="outerCardProgress"
           >
           </CircularProgress>
           {/* <EmojiEventsOutlined className="icon"/> */}
           {data.iconName}
         </div>
       </div>
+
       <div className="cardBottom">
         <div className="bottomLeft">
           <div className="iconContainer">

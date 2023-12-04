@@ -18,12 +18,13 @@
   top: 70px;
   left: 14.7%;
 
+  // -------- Widget Wrapper ---------
   .widgetWrapper {
     display: flex;
   // justify-content: space-between;
     gap: 15px;
   }
-
+// -------- Chart Wrapper ---------
   .chartWrapper {
     display: flex;
     align-items: center;
@@ -31,6 +32,7 @@
     gap: 15px;
   }
   
+  // -------- SocialStat Wrapper ---------
   .socialStatWrapper {
     display: flex;
     flex-wrap: wrap; // Only enable this if you are not using "flex: 1;" in ".socialStat" in  "socialStat.scss"
@@ -38,17 +40,45 @@
     gap: 15px;
   }
 
+  // -------- socialTable Wrapper ---------
   .socialTableWrapper {
     display: flex;
     align-items: center;
     gap: 15px;
+
+    .socialTablePlatform {
+      flex: 1;
+      height: 360px;
+      background-color: #fff;
+      box-sizing: border-box;
+      padding-left: 20px;
+      // overflow: hidden;
+      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+      // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    }
+
+    .socialTableDevice {
+      flex: 1;
+      height: 360px;
+      background-color: #fff;
+      box-sizing: border-box;
+      // padding-left: 20px;
+      // overflow: hidden;
+      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+      // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    }
+
+
+
   }
 
+  // -------- socialCompilation ---------
   .socialCompilation {
     display: flex;
     align-items: center;
     gap: 15px;
 
+    // -------- socialCardWrapper ---------
     .socialCardWrapper {
       flex: 1;
       height: 380px;
@@ -61,24 +91,73 @@
     }
   }
 
+  // -------- informationWrapper ---------
   .informationWrapper {
     display: flex;
     gap: 15px;
   }
   
+  // -------- todo Timeline profile Wrapper ---------
   .todoTimelineprofileWrapper {
     display: flex;
     gap: 15px;
   }
   
+  // -------- widget Wrapper ---------
   .analyticsWrapper {
     display: flex;
     gap: 15px;
   } 
 
-  .newApplicantsWrapper {
+// ------------ newApplicants Wrapper -----------
+  .newApplicantsWrapper { // here is another container
     display: flex;
     gap: 15px;
+    height: 500px;
+    // padding-bottom: 30px;
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    background-color: #fff;
+    padding: 20px 20px 30px 20px;
+
+    .imgFirstname {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .actionContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-left: 0;
+    
+  
+      .viewButton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 7px;
+        padding: 3px 10px;
+        border: none;
+        background-color: #3bb077;
+        color: #fff;
+        cursor: pointer;
+      }
+  
+      .appDeleteIcon {
+        color: red;
+        cursor: pointer;
+      }
+    }
+  
+    // .recentTable {
+    //   display: flex;
+    //   align-items: center;
+    // }
   }
 
  

@@ -1,0 +1,100 @@
+.userData {
+  flex: 1;
+  height: 750px;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  background-color: #fff;
+ 
+  .headerTitle {
+    font-size: 14px;
+    color: #252525;
+    margin: 0 0 15px;
+    // text-align: center;
+  }
+
+  .userDataContainer {
+      display: flex;
+      gap: 14px;
+
+      // .profileImgContainer {
+      //   // width: 170;
+      //   width: 70;
+      //   height: 150;
+      //   // overflow: hidden;
+      //   // object-fit: cover;
+      // }
+
+      .userDataItems {
+        // display: flex;
+
+        // .studentFullName {
+        //   padding-left: 15px;
+        //   font-size: 22px;
+        //   font-weight: 500;
+        //   color: #252525;
+        // }
+
+        div.dataItemHead {
+          margin: -5 0 10px 0;
+          display: flex;
+          align-items: center;
+          // justify-content: ;
+
+          // .dataItemSubHead {
+          //   display: inline-block;
+          //   color: #03a9f5;
+          //   padding: 0 10px 10px 0;
+          //   border-bottom: 2px solid #03a9f5;
+          // }
+
+          .dataItemLine {
+            display: flex;
+            margin-bottom: -34px;
+            width: 100%;
+            border: 0.5px solid #999;
+          }
+        }
+
+        ul.dataItems {
+          list-style-type: none;
+          padding: 15px;
+          margin: 0;
+          width: 500px;
+          height: 571px;
+          color: #252525;
+          font-size: 16px;
+
+          li.dataItem:first-child{
+            margin: -23px 0 0px -196px;
+            padding-left: 15px;
+            font-size: 22px;
+            font-weight: 500;
+            color: #252525;
+             height: 42px;
+          }
+
+          li.dataItem:nth-child(2) {
+            display: inline-block;
+            height: 32px;
+            color: #03a9f5;
+            padding: 0 10px 5px 0;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e7e7e7;
+          }
+          
+          li.dataItem {
+            width: 100%;
+            height: 39px;
+
+            .dataItemTitle {
+              display: inline-block;
+              width: 180px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+  }
+}

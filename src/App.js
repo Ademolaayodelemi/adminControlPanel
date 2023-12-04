@@ -3,6 +3,7 @@ import './App.scss';
 import Topbar from './components/topbar/Topbar';
 import Sidebar from './components/sidebar/Sidebar';
 import Home from './pages/home/Home';
+import Management from './pages/management/Management';
 
 function App() {
   return (
@@ -11,9 +12,8 @@ function App() {
         <Sidebar/>
       <div className="container">
     <Routes>
-      <Route path="/" element={<Home />}/>
-
-       
+      {/* <Route path="/" element={<Home />}/> */}
+      <Route path="/" element={<Management />}/>
     </Routes>
       </div>
     </BrowserRouter>

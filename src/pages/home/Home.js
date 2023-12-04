@@ -4,17 +4,10 @@ import LineChart from "../../components/lineChart/LineChart";
 import Widget from "../../components/widget/Widget";
 import "./home.scss";
 import SocialStat from "../../components/socialStat/SocialStat";
-import SocialTable from "../../components/socialTable/SocialTable";
-import { socialTablePlatformData, socialTableDeviceData } from "../../tableData";
+import SmallTable from "../../components/smallTable/SmallTable";
 import PieChart from "../../components/socialPieChart/SocialPieChart";
 import SocialPieChart from "../../components/socialPieChart/SocialPieChart";
 import SocialCard from "../../components/socialCard/SocialCard";
-import { 
-  twitterData, 
-  facebookData, 
-  linkedinData, 
-  youtubeData 
-} from "../../socialData"
 import InfoBarChart from "../../components/infoBarChart/InfoBarChart";
 import SourceAnalysis from "../../components/sourceAnalysis/SourceAnalysis";
 import ActivityChart from "../../components/activityChart/ActivityChart";
@@ -24,7 +17,18 @@ import TimelineCard from "../../components/timelineCard/TimelineCard";
 import ProfileCalender from "../../components/profileCalender/ProfileCalender";
 import EnrolmentAnalytics from "../../components/enrolmentAnalytics/EnrolmentAnalytics";
 import RegistrationOverview from "../../components/registrationOverview/registrationOverview";
-import NewApplicants from "../../components/newApplicants/NewApplicants";
+import { 
+  socialTablePlatformColumns, socialTablePlatformRows,
+  socialTableDeviceColumns, socialTableDeviceRows,
+  newApplicantsColumns, newApplicantsRows, 
+} from "../../tableData";
+import { 
+  twitterData, 
+  facebookData, 
+  linkedinData, 
+  youtubeData 
+} from "../../socialData"
+import DataTable from "../../components/dataTable/DataTable";
 
 
 const Home = () => {
@@ -49,8 +53,20 @@ const Home = () => {
         <SocialStat twitterData={youtubeData} />
       </div>
       <div className="socialTableWrapper">
-        <SocialTable tableData={socialTablePlatformData}/>       
-        <SocialTable tableData={socialTableDeviceData}/>       
+        <div className="socialTablePlatform">
+          <SmallTable 
+          title='Platform Stats'
+          columns={socialTablePlatformColumns}
+          rows={socialTablePlatformRows}
+          />       
+        </div>
+        <div className="socialTableDevice">
+          <SmallTable 
+          title='Device Stats'
+          columns={socialTableDeviceColumns}
+          rows={socialTableDeviceRows}
+          />       
+        </div>
       </div>
       <div className="socialCompilation">
         <SocialPieChart/>
@@ -77,7 +93,11 @@ const Home = () => {
         <RegistrationOverview title='Registration Overview'/>
       </div>
       <div className="newApplicantsWrapper">
-        <NewApplicants title='Recent Applicants'/>
+        <DataTable 
+        title='Recent Applicants'
+        columns={newApplicantsColumns}
+        rows={newApplicantsRows}
+        />
       </div>
       
     </div>

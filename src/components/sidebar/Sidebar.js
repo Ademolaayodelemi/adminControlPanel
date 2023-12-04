@@ -25,51 +25,66 @@ import "./sidebar.scss";
 
 const Sidebar = () => {
 
-  const [isOpen, setIsopen] = useState(false);
+  const [isOpen, setIsopen] = useState({
+    menuOne: false,
+  });
 
-  const toggleDropdown = () => {
-    setIsopen(!isOpen);
-    console.log('tested ok')
+  const toggleDropdown = (name) => {
+     setIsopen(prev => {
+      return {...prev, [name]: !isOpen.menuOne} 
+    });
+    // console.log('tested ok')
   }
 
 
   return (
+    // NOTE(as important) the id="accordion", data-bs-toggle="collapse", className='collapse', data-bs-parent="#accordion" etc.
+    // are all from bootstrap 5. which can be found in: https://www.w3schools.com/bootstrap5/bootstrap_collapse.php 
+    // The Bootstrap 5 CDN has been added to the head section of the index.html file inside the public folder.
+    // The href="#Dash", id="Dash", etc serve as link and unique identify to the targeted dropdown.
     <div className='sidebar'>
-      <div className="sidebarWrapper">
-        <ul className="list">
+      <div className="sidebarWrapper" >
+        <ul className="list" id="accordion">
           <h3 className="title">Main</h3>
           <li className="listItem">
-            <div className="listItemMenu " >
-              <div className="leftContent">
-                <HomeOutlined className="icon"/>
-                <NavLink to='/' ><span>Dashboard</span></NavLink>
+            <NavLink to='/' >
+              <div className="listItemMenu" data-bs-toggle="collapse" href="#dash">
+                <div className="leftContent">
+                  <HomeOutlined className="icon"/>
+                  <span>Dashboard</span>
+                </div>
+                <div className="rightContent">
+                  <span className="itemBadge">6</span>
+                  <KeyboardArrowDown className="arrowDownIcon" />
+                </div>
               </div>
-              <div className="rightContent">
-                <span className="itemBadge">6</span>
-                <KeyboardArrowDown onClick={toggleDropdown} className="arrowDownIcon" />
-              </div>
-            </div>
-            {isOpen && <ul className="dropdownList">
-              <li className="dropdownListItem" >Dashboard 1</li>
-              <li className="dropdownListItem">Dashboard 2</li>
-              <li className="dropdownListItem">Dashboard 3</li>
-              <li className="dropdownListItem">Dashboard 5</li>
-              <li className="dropdownListItem">Dashboard 6</li>
-            </ul>}
+            </NavLink>
+            {/* {isOpen.menuOne &&  */}
+            {/* <ul className={ isOpen.menuOne ? 'dropdownList tester' : 'dropdownList' }> */}
+            <ul className='dropdownList collapse' data-bs-parent="#accordion" id="dash">
+              <NavLink to='111'><li className="dropdownListItem">Dashboard 1</li></NavLink>
+              <NavLink to='222'><li className="dropdownListItem">Dashboard 2</li></NavLink>
+              <NavLink to='333'><li className="dropdownListItem">Dashboard 3</li></NavLink>
+              <NavLink to='444'><li className="dropdownListItem">Dashboard 4</li></NavLink>
+              <NavLink to='555'><li className="dropdownListItem">Dashboard 5</li></NavLink>
+            </ul>
+            {/* } */}
           </li>
           <h3 className="title">School</h3>
           <li className="listItem">
-            <div className="listItemMenu">
-              <div className="leftContent">
-                <NoteAltOutlined className="icon"/>
-                <NavLink to='2'><span>Management</span></NavLink>
+            <NavLink to='jj'>
+              <div className="listItemMenu" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#manag">
+                <div className="leftContent">
+                  <NoteAltOutlined className="icon"/>
+                  <span>Management</span>
+                </div>
+                <div className="rightContent">
+                  <span className="itemBadge">28</span>
+                  <KeyboardArrowDown className="arrowDownIcon"/>
+                </div>
               </div>
-              <div className="rightContent">
-                <span className="itemBadge">28</span>
-                <KeyboardArrowDown className="arrowDownIcon"/>
-              </div>
-            </div>
-            <ul className="dropdownList" style={{display: 'none'}}>
+            </NavLink>
+            <ul className="dropdownList collapse" id="manag" data-bs-parent="#accordion">
               <NavLink to='11'><li className="dropdownListItem">Student</li></NavLink>
               <NavLink to='22'><li className="dropdownListItem">Student Profile</li></NavLink>
               <NavLink to='33'><li className="dropdownListItem">Student Detail</li></NavLink>
@@ -79,7 +94,7 @@ const Sidebar = () => {
               <NavLink to='77'><li className="dropdownListItem">Teacher Info</li></NavLink>
               <NavLink to='88'><li className="dropdownListItem">Teacher Details</li></NavLink>
               <NavLink to='10'><li className="dropdownListItem">Class Info</li></NavLink>
-              <li className="dropdownListItem"><NavLink to='11'>Subject</NavLink></li>
+              <NavLink to='11'><li className="dropdownListItem">Subject</li></NavLink>
               <li className="dropdownListItem">Routine</li>
               <li className="dropdownListItem">Attendance</li>
               <li className="dropdownListItem">Exam Result</li>
@@ -101,17 +116,19 @@ const Sidebar = () => {
           </li>
           <h3 className="title">Restaurant</h3>
           <li className="listItem">
-            <div className="listItemMenu">
-              <div className="leftContent">
-                <RestaurantOutlined className="icon"/>
-                <NavLink to='3'><span>Restaurant</span></NavLink>
+            <NavLink to='yy'>
+              <div className="listItemMenu" data-bs-toggle="collapse" href="#res">
+                <div className="leftContent">
+                  <RestaurantOutlined className="icon"/>
+                  <span>Restaurant</span>
+                </div>
+                <div className="rightContent">
+                  <span className="itemBadge">7</span>
+                  <KeyboardArrowDown className="arrowDownIcon"/>
+                </div>
               </div>
-              <div className="rightContent">
-                <span className="itemBadge">7</span>
-                <KeyboardArrowDown className="arrowDownIcon"/>
-              </div>
-            </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
+            </NavLink>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="res">
                 <li className="dropdownListItem">Menu One</li>
                 <li className="dropdownListItem">Menu Two</li>
                 <li className="dropdownListItem">Menu Three</li>
@@ -123,17 +140,17 @@ const Sidebar = () => {
           </li>
           <h3 className="title">Apps</h3>
           <li className="listItem">
-            <div className="listItemMenu">
+            <div className="listItemMenu" data-bs-toggle="collapse" href="#char">
               <div className="leftContent">
                 <BarChartOutlined className="icon"/>
-                <NavLink to='3'><span>Charts</span></NavLink>
+                <span>Charts</span>
               </div>
               <div className="rightContent">
                 {/* <span className="itemBadge">7</span> */}
                 <KeyboardArrowDown className="arrowDownIcon"/>
               </div>
             </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="char">
                 <li className="dropdownListItem">Flot</li>
                 <li className="dropdownListItem">Morris</li>
                 <li className="dropdownListItem">ChartJs</li>
@@ -147,7 +164,7 @@ const Sidebar = () => {
             <div className="listItemMenu">
               <div className="leftContent">
                 <CalendarMonthOutlined className="icon"/>
-                <NavLink to='3'><span>Calender</span></NavLink>
+                <span>Calender</span>
               </div>
             </div>
           </li>
@@ -155,7 +172,7 @@ const Sidebar = () => {
             <div className="listItemMenu">
               <div className="leftContent">
                 <MailOutline className="icon"/>
-                <NavLink to='3'><span>Email</span></NavLink>
+                <span>Email</span>
               </div>
             </div>
           </li>
@@ -163,7 +180,7 @@ const Sidebar = () => {
             <div className="listItemMenu">
               <div className="leftContent">
                 <PermIdentityOutlined className="icon"/>
-                <NavLink to='3'><span>Profile</span></NavLink>
+                <span>Profile</span>
               </div>
             </div>
           </li>
@@ -171,24 +188,24 @@ const Sidebar = () => {
             <div className="listItemMenu">
               <div className="leftContent">
                 <Widgets className="icon"/>
-                <NavLink to='3'><span>Widget</span></NavLink>
+                <span>Widget</span>
               </div>
             </div>
           </li>
           <h3 className="title">Features</h3>
           <li className="listItem">
-            <div className="listItemMenu">
+            <div className="listItemMenu" data-bs-toggle="collapse" href="#elem">
               <div className="leftContent">
                 <ViewQuiltOutlined className="icon"/>
-                <NavLink to='3'><span>UI Elements</span></NavLink>
+                <span>UI Elements</span>
               </div>
               <div className="rightContent">
                 {/* <span className="itemBadge">7</span> */}
                 <KeyboardArrowDown className="arrowDownIcon"/>
               </div>
             </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
-              <li><a href="ui-accordion.html">Accordion</a></li>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="elem">
+              <li className="dropdownListItem">Accordion</li>
                 <li className="dropdownListItem">Alerts</li>
                 <li className="dropdownListItem">Badges</li>
                 <li className="dropdownListItem">Button</li>
@@ -202,45 +219,45 @@ const Sidebar = () => {
               </ul>
           </li>
           <li className="listItem">
-            <div className="listItemMenu">
+            <div className="listItemMenu" data-bs-toggle="collapse" href="#comp">
               <div className="leftContent">
                 <TuneOutlined className="icon"/>
-                <NavLink to='3'><span>Components</span></NavLink>
+                <span>Components</span>
               </div>
               <div className="rightContent">
                 {/* <span className="itemBadge">7</span> */}
                 <KeyboardArrowDown className="arrowDownIcon"/>
               </div>
             </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="comp">
                 <li className="dropdownListItem">Calendar</li>
                 <li className="dropdownListItem">Carousel</li>
                 <li className="dropdownListItem">Weather</li>
                 <li className="dropdownListItem">Datamap</li>
                 <li className="dropdownListItem">To do</li>
-                <li className="dropdownListItem">lScrollable</li>
-                <li className="dropdownListItem">lSweet Alert</li>
-                <li className="dropdownListItem">oastr</li>
-                <li className="dropdownListItem">asic.htmlBasic Range Slider</li>
-                <li className="dropdownListItem">dvance.htmlAdvance Range Slider</li>
+                <li className="dropdownListItem">Scrollable</li>
+                <li className="dropdownListItem">Sweet Alert</li>
+                <li className="dropdownListItem">Toastr</li>
+                <li className="dropdownListItem">Range Slider</li>
+                <li className="dropdownListItem">Adv. Range Slider</li>
                 <li className="dropdownListItem">Nestable</li>
                 <li className="dropdownListItem">Portlets</li>
-                <li className="dropdownListItem">ing.htmlBar Rating</li>
-                <li className="dropdownListItem">tmljRate</li>
+                <li className="dropdownListItem">Bar Rating</li>
+                <li className="dropdownListItem">Rate</li>
               </ul>
           </li>
           <li className="listItem">
-            <div className="listItemMenu">
+            <div className="listItemMenu" data-bs-toggle="collapse" href="#tab">
               <div className="leftContent">
                 <CalendarViewMonthOutlined className="icon"/>
-                <NavLink to='3'><span>Table</span></NavLink>
+                <span>Table</span>
               </div>
               <div className="rightContent">
                 {/* <span className="itemBadge">7</span> */}
                 <KeyboardArrowDown className="arrowDownIcon"/>
               </div>
             </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="tab">
                 <li className="dropdownListItem">Basic</li>
                 <li className="dropdownListItem">Datatable</li>
                 <li className="dropdownListItem">Datatable Export</li>
@@ -249,34 +266,34 @@ const Sidebar = () => {
               </ul>
           </li>
           <li className="listItem">
-            <div className="listItemMenu">
+            <div className="listItemMenu" data-bs-toggle="collapse" href="#icon">
               <div className="leftContent">
                 <FavoriteBorderOutlined className="icon"/>
-                <NavLink to='3'><span>Icons</span></NavLink>
+                <span>Icons</span>
               </div>
               <div className="rightContent">
                 {/* <span className="itemBadge">7</span> */}
                 <KeyboardArrowDown className="arrowDownIcon"/>
               </div>
             </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="icon">
                 <li className="dropdownListItem">Themify</li>
               </ul>
           </li>
           <li className="listItem">
-            <div className="listItemMenu">
+            <div className="listItemMenu" data-bs-toggle="collapse" href="#map">
               <div className="leftContent">
                 <MapOutlined className="icon"/>
-                <NavLink to='3'><span>Maps</span></NavLink>
+                <span>Maps</span>
               </div>
               <div className="rightContent">
                 {/* <span className="itemBadge">7</span> */}
                 <KeyboardArrowDown className="arrowDownIcon"/>
               </div>
             </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
-                <li>Basic</li>
-                <li>Vector Map</li>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="map">
+                <li className="dropdownListItem">Basic</li>
+                <li className="dropdownListItem">Vector Map</li>
               </ul>
           </li>
           <h3 className="title">Form</h3>
@@ -284,37 +301,37 @@ const Sidebar = () => {
             <div className="listItemMenu">
               <div className="leftContent">
                 <ListOutlined className="icon"/>
-                <NavLink to='3'><span>Basic Form</span></NavLink>
+                <span>Basic Form</span>
               </div>
             </div>
           </li>
           <h3 className="title">Miscellaneous</h3>
           <li className="listItem">
-            <div className="listItemMenu">
+            <div className="listItemMenu" data-bs-toggle="collapse" href="#invo">
               <div className="leftContent">
                 <DescriptionOutlined className="icon"/>
-                <NavLink to='3'><span>Invoice</span></NavLink>
+                <span>Invoice</span>
               </div>
               <div className="rightContent">
                 <KeyboardArrowDown className="arrowDownIcon"/>
               </div>
             </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="invo">
                 <li className="dropdownListItem">Basic</li>
                 <li className="dropdownListItem">Editable</li>
               </ul>
           </li>
           <li className="listItem">
-            <div className="listItemMenu">
+            <div className="listItemMenu" data-bs-toggle="collapse" href="#pag">
               <div className="leftContent">
                 <LayersOutlined className="icon"/>
-                <NavLink to='3'><span>Pages</span></NavLink>
+                <span>Pages</span>
               </div>
               <div className="rightContent">
                 <KeyboardArrowDown className="arrowDownIcon"/>
               </div>
             </div>
-              <ul className="dropdownList" style={{display: 'none'}}>
+              <ul className="dropdownList collapse" data-bs-parent="#accordion" id="pag">
                 <li className="dropdownListItem">Login</li>
                 <li className="dropdownListItem">Register</li>
                 <li className="dropdownListItem">Forgot password</li>
@@ -324,7 +341,7 @@ const Sidebar = () => {
             <div className="listItemMenu">
               <div className="leftContent">
                 <InsertDriveFileOutlined className="icon"/>
-                <NavLink to='3'><span>Documentation</span></NavLink>
+                <span>Documentation</span>
               </div>
             </div>
           </li>
@@ -332,7 +349,7 @@ const Sidebar = () => {
             <div className="listItemMenu">
               <div className="leftContent">
                 <LogoutOutlined className="icon"/>
-                <NavLink to='3'><span>Logout</span></NavLink>
+                <span>Logout</span>
               </div>
             </div>
           </li>

@@ -3,12 +3,32 @@ $myColor: red;
 $myFontSize: 18px;
 $myWidth: 680px;
 $myBackground: #fff !global;
+$myFont: Montserrat, sans-serif;
+$myFont2: MontserratLight, sans-serif;
 
 
 * {
   box-sizing: border-box;
+  .headerTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    // margin: 0 0 5px;
+    // text-align: center;
+  }
+  
+  
+  
+  .headerTitle2 {
+    font-size: 18px;
+    color: #555;
+    font-family: Montserrat, sans-serif;
+    font-family: 100;
+    margin: 0 0 10px 5px;
+  }
 }
 .container {
   display: flex;
   // margin-top: 10px;
+
 }
