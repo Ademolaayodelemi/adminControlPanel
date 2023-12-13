@@ -72,7 +72,7 @@ const Sidebar = () => {
           </li>
           <h3 className="title">School</h3>
           <li className="listItem">
-            <NavLink to='jj'>
+            <NavLink to='/management'>
               <div className="listItemMenu" data-bs-toggle="collapse" data-bs-parent="#accordion" href="#manag">
                 <div className="leftContent">
                   <NoteAltOutlined className="icon"/>

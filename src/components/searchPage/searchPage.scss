@@ -1,0 +1,80 @@
+$myFont: Montserrat, sans-serif;
+$myColorB: #03a9f5;
+$myColorY: #f39c12;
+$myColorR: #e74c3c;
+$myColorG: #1de9b6;
+
+.searchPage {
+  // display: flex;
+  height: 300px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+
+  .searchForm {
+    margin-top: 30px;
+
+    .SearcInputContainer {
+      display: flex;
+      gap: 20px;
+
+      .inputWrap {
+        flex: 1;
+
+        .inputLabel {
+          font-weight: 400;
+          margin-bottom: 10px;
+          font-size: 14px;
+          color: #252525;
+          margin-bottom: 10px;
+        }
+
+        input[type] {
+          width: 100%;
+          padding: 8px 12px;
+          margin-bottom: 15px;
+          background-color: #eef1f6;
+          // background-color: #f5f5f5;
+          border: none;
+
+          &:focus {
+            outline: none;
+            border: 1px solid #757575;
+            // background-color: lightblue;
+          }
+        }
+
+        ::placeholder {
+          color: #757575;
+          font-size: 14px;        
+        }
+      }
+
+    }
+  }
+
+  .buttoncontainer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    
+    button[type="submit"], button[type="reset"] {
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-size: 18px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    button[type="submit"] {
+      background-color: $myColorY;
+    }
+    button[type="reset"] {
+      background: #878787;;
+    }
+  }
+}

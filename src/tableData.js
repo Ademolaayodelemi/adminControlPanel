@@ -1,8 +1,7 @@
 import Avatar from '@mui/material/Avatar';
-import { DeleteOutlined, VisibilityOutlined } from "@mui/icons-material";
+import { DeleteOutlined, EditCalendarOutlined, VisibilityOutlined } from "@mui/icons-material";
 import { v4 as uuidv4 } from 'uuid';
 import StatusButton from './components/statusButton/StatusButton';
-
 
 
 
@@ -21,6 +20,11 @@ export const studentProfileData = [
   },
   {
     id: uuidv4(),
+    title: 'Student ID:',
+    value: 2048057,
+  },
+  {
+    id: uuidv4(),
     title: 'First Name:',
     value: 'Olanrewaju',
   },
@@ -36,34 +40,29 @@ export const studentProfileData = [
   },
   {
     id: uuidv4(),
-    title: 'Class:',
+    title: 'Year:',
     value: 6,
   },
   {
     id: uuidv4(),
-    title: 'Section:',
-    value: 'A',
-  },
-  {
-    id: uuidv4(),
-    title: 'Roll:',
-    value: 9055,
+    title: 'Nationality:',
+    value: 'British',
   },
   {
     id: uuidv4(),
     title: 'Gender:',
     value: 'Male',
   },
-  {
-    id: uuidv4(),
-    title: 'Father Name:',
-    value: '----',
-  },
-  {
-    id: uuidv4(),
-    title: 'Mother Name:',
-    value: '----',
-  },
+  // {
+  //   id: uuidv4(),
+  //   title: 'Father Name:',
+  //   value: '----',
+  // },
+  // {
+  //   id: uuidv4(),
+  //   title: 'Mother Name:',
+  //   value: '----',
+  // },
   {
     id: uuidv4(),
     title: 'Date of Birth:',
@@ -71,28 +70,33 @@ export const studentProfileData = [
   },
   {
     id: uuidv4(),
-    title: 'Father Occupation:',
-    value: 'Banker',
+    title: 'Telephone No',
+    value: '+44759165582',
   },
   {
     id: uuidv4(),
     title: 'Religion:',
-    value: '----',
+    value: 'Christianity',
   },
   {
     id: uuidv4(),
-    title: 'Emai:',
+    title: 'Email:',
     value: 'Student@example.com',
   },
   {
     id: uuidv4(),
-    title: 'Admission Date:',
-    value: '10/04/2017',
+    title: 'Start Date:',
+    value: '10/04/2022',
   },
   {
     id: uuidv4(),
-    title: 'Address:',
-    value: '35, Ashton Rd, UK',
+    title: 'End Date:',
+    value: '09/04/2025',
+  },
+  {
+    id: uuidv4(),
+    title: 'Home Address:',
+    value: '30, Terrace Rd, UK',
   },
 ];
 
@@ -127,7 +131,7 @@ export const studentProfileData = [
 // ------------- Social Table Platform Data ---------------
 // NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const columns = socialTablePlatformColums.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
 
-export const socialTablePlatformColumns = [
+export const socialPlatformTableColumns = [
   // field is the only required property since it's the column identifier. It's also used to match with Row values.
   // { field: 'id', headerName: 'ID', width: 40 },
   {
@@ -162,7 +166,7 @@ export const socialTablePlatformColumns = [
 
 // NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const rows = socialTablePlatformRows.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
 
-export const socialTablePlatformRows = [
+export const socialPlatformTableRows = [
   { id: 1,
     platform: 'Facebook',
     visitors: 3456,
@@ -202,7 +206,7 @@ export const socialTablePlatformRows = [
 // ------------- Social Table Device Data ---------------
 // NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const columns = socialTableDeviceColumns.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
 
-export const socialTableDeviceColumns = [
+export const socialDeviceTableColumns = [
   // {id:1, tableHead1: 'Device', tableHead2: 'Visits', tableHead3: 'Avg. time'},
 
   {
@@ -230,7 +234,7 @@ export const socialTableDeviceColumns = [
 
 // NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const rows = socialTableDeviceRows.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
 
-export const socialTableDeviceRows = [
+export const socialDeviceTableRows = [
   {
     id:1, 
     device: 'Unknown', 
@@ -429,8 +433,8 @@ export const newApplicantsColumns = [
 export const newApplicantsRows = [
   { 
     id: 1, 
-    lastName: 'Snow', 
     firstName: 'Jon', 
+    lastName: 'Snow', 
     age: 35,
     gender: 'Male',
     course: 'Computer Science',
@@ -444,8 +448,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 2, 
-    lastName: 'Lannister', 
     firstName: 'Cersei', 
+    lastName: 'Lannister', 
     age: 42,
     gender: 'Male',
     course: 'Computer Science',
@@ -459,8 +463,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 3, 
-    lastName: 'Lannister', 
     firstName: 'Jaime', 
+    lastName: 'Lannister', 
     age: 45,
     gender: 'Male',
     course: 'Computer Science',
@@ -474,8 +478,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 4, 
-    lastName: 'Stark', 
     firstName: 'Arya', 
+    lastName: 'Stark', 
     age: 16,
     gender: 'Male',
     course: 'Computer Science',
@@ -489,8 +493,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 5, 
-    lastName: 'Targaryen', 
     firstName: 'Daenerys', 
+    lastName: 'Targaryen', 
     age: 25,
     gender: 'Male',
     course: 'Computer Science',
@@ -504,8 +508,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 6, 
-    lastName: 'Melisandre', 
     firstName: 'Matt', 
+    lastName: 'Melisandre', 
     age: 15,
     gender: 'Male',
     course: 'Computer Science',
@@ -519,8 +523,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 7, 
-    lastName: 'Clifford', 
     firstName: 'Ferrara', 
+    lastName: 'Clifford', 
     age: 44,
     gender: 'Male',
     course: 'Computer Science',
@@ -534,8 +538,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 8, 
-    lastName: 'Frances', 
     firstName: 'Rossini', 
+    lastName: 'Frances', 
     age: 36,
     gender: 'Male',
     course: 'Computer Science',
@@ -549,8 +553,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 9, 
-    lastName: 'Roxie', 
     firstName: 'Harvey', 
+    lastName: 'Roxie', 
     age: 65,
     gender: 'Male',
     course: 'Computer Science',
@@ -564,8 +568,8 @@ export const newApplicantsRows = [
   },
   { 
     id: 10, 
-    lastName: 'Casey', 
     firstName: 'Paul', 
+    lastName: 'Casey', 
     age: 65,
     gender: 'Male',
     course: 'Computer Science',
@@ -580,7 +584,7 @@ export const newApplicantsRows = [
 ];
 
 // -------------------- Exam Results ----------------------
-// NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const columns = examResultsColumns.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
+// NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const columns = examResultsColumns.map( column =>  column ); WITHOUT THE BELOW ARRAY OF OBJECTS.
 
 export const examResultsColumns = [
   {
@@ -779,21 +783,47 @@ export const examResultsRows = [
     semester: 'First Semester',
     session: '15/04/2020/21',
   },
+  { 
+    id: uuidv4(),
+    courseTitle: 'Embedded System',
+    courseCode: 'CSC 702',
+    gradePoint: '4.00',
+    score: 85,
+    courseUnit: 3,
+    status: 'Passed',
+    semester: 'First Semester',
+    session: '15/04/2020/21',
+  },
+  { 
+    id: uuidv4(),
+    courseTitle: 'Embedded System',
+    courseCode: 'CSC 702',
+    gradePoint: '4.00',
+    score: 85,
+    courseUnit: 3,
+    status: 'Passed',
+    semester: 'First Semester',
+    session: '15/04/2020/21',
+  },
  ];
 
 //  --------------- Course Work ----------------
- export const courseWorkColumns = [
+ export const courseWorkTableColumns = [
   {
     field: 'courseTitle',
     headerName: 'Course Title',
     flex: 1,
     // width: 130,
+    // headerAlign: 'center',
+
   },
   {
     field: 'status',
     headerName: 'Status',
     flex: 1,
     // width: 130,
+    // headerAlign: 'center',
+
     renderCell: params => {
       return (
         <StatusButton type={params.row.status}/>
@@ -805,16 +835,20 @@ export const examResultsRows = [
     headerName: 'Score (%)',
     flex: 1,
     // width: 130,
+    // headerAlign: 'center',
+
   },
   {
     field: 'date',
     headerName: 'Date Submitted',
     flex: 1,
     // width: 130,
+    // headerAlign: 'center',
+
   },
 ];
 
-export const courseWorkRows = [
+export const courseWorkTableRows = [
   {
     id: uuidv4(),
     courseTitle: 'Embedded System',
@@ -857,4 +891,1075 @@ export const courseWorkRows = [
     score: 30,
     date: 'January 22',
   },
-]
+];
+
+// ----------------- Lectures Remarks ------------------
+export const lecturesRemarks = [
+  {
+    remarkAvater: 'img',
+    remarkHead: 'John Doe',
+    remarkText: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.',
+    remarkStatus: 'APPROVED',
+    remarkTimeStamp: 'December 5, 2023',
+  },
+  {
+    remarkAvater: 'img',
+    remarkHead: 'John Doe',
+    remarkText: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.',
+    remarkStatus: 'PENDING',
+    remarkTimeStamp: 'December 5, 2023',
+  },
+  {
+    remarkAvater: 'img',
+    remarkHead: 'John Doe',
+    remarkText: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.',
+    remarkStatus: 'REJECTED',
+    remarkTimeStamp: 'December 5, 2023',
+  },
+];
+
+
+// ----------- Hostel List -----------
+
+export const hostelListColumns = [
+  { 
+    field: "hostelName", 
+    headerName: "Hotel Name", 
+    room: 204,
+    flex: 1,
+    // minWidth: , 
+    // maxWidth: , 
+},
+  { 
+    field: "roomNo", 
+    headerName: "Room No", 
+    room: 204,
+    flex: 1,
+    // minWidth: , 
+    // maxWidth: , 
+},
+  { 
+    field: "roomType", 
+    headerName: "Room Type", 
+    room: 204,
+    flex: 1,
+    // minWidth: , 
+    // maxWidth: , 
+},
+  { 
+    field: "noOfBeds", 
+    headerName: "No Of Beds", 
+    room: 204,
+    flex: 1,
+    // minWidth: , 
+    // maxWidth: , 
+},
+  { 
+    field: "cost", 
+    headerName: "Cost Per Bed", 
+    room: 204,
+    flex: 1,
+    // minWidth: , 
+    // maxWidth: , 
+},
+ 
+];
+
+export const hostelListRows = [
+  { 
+    id: uuidv4(),
+    hostelName: "Bay Hostel", 
+    roomNo: 204,
+    roomType: 'double',
+    noOfBeds: 3,
+    cost: '£600',
+},
+  { 
+    id: uuidv4(),
+    hostelName: "Singleton Hostel", 
+    roomNo: 204,
+    roomType: 'Single',
+    noOfBeds: 3,
+    cost: '£450',
+},
+  { 
+    id: uuidv4(),
+    hostelName: "Bay Hostel", 
+    roomNo: 204,
+    roomType: 'Single',
+    noOfBeds: 3,
+    cost: '£450',
+},
+  { 
+    id: uuidv4(),
+    hostelName: "Singleton Hostel", 
+    roomNo: 204,
+    roomType: 'double',
+    noOfBeds: 3,
+    cost: '£600',
+},
+  { 
+    id: uuidv4(),
+    hostelName: "Bay Hostel", 
+    roomNo: 204,
+    roomType: 'double',
+    noOfBeds: 3,
+    cost: '£600',
+},
+  { 
+    id: uuidv4(),
+    hostelName: "Singleton Hostel", 
+    roomNo: 204,
+    roomType: 'Single',
+    noOfBeds: 3,
+    cost: '£450',
+},
+  { 
+    id: uuidv4(),
+    hostelName: "Bay Hostel", 
+    roomNo: 204,
+    roomType: 'Single',
+    noOfBeds: 3,
+    cost: '£450',
+},
+  { 
+    id: uuidv4(),
+    hostelName: "Singleton Hostel", 
+    roomNo: 204,
+    roomType: 'double',
+    noOfBeds: 3,
+    cost: '£600',
+},
+{ 
+  id: uuidv4(),
+  hostelName: "Bay Hostel", 
+  roomNo: 204,
+  roomType: 'Single',
+  noOfBeds: 3,
+  cost: '£450',
+},
+{ 
+  id: uuidv4(),
+  hostelName: "Singleton Hostel", 
+  roomNo: 204,
+  roomType: 'double',
+  noOfBeds: 3,
+  cost: '£600',
+},
+{ 
+  id: uuidv4(),
+  hostelName: "Singleton Hostel", 
+  roomNo: 204,
+  roomType: 'double',
+  noOfBeds: 3,
+  cost: '£600',
+},
+{ 
+  id: uuidv4(),
+  hostelName: "Singleton Hostel", 
+  roomNo: 204,
+  roomType: 'double',
+  noOfBeds: 3,
+  cost: '£600',
+},
+{ 
+  id: uuidv4(),
+  hostelName: "Singleton Hostel", 
+  roomNo: 204,
+  roomType: 'double',
+  noOfBeds: 3,
+  cost: '£600',
+},
+{ 
+  id: uuidv4(),
+  hostelName: "Singleton Hostel", 
+  roomNo: 204,
+  roomType: 'double',
+  noOfBeds: 3,
+  cost: '£600',
+},
+{ 
+  id: uuidv4(),
+  hostelName: "Singleton Hostel", 
+  roomNo: 204,
+  roomType: 'double',
+  noOfBeds: 3,
+  cost: '£600',
+},
+];
+
+// ------------------- All Students Data ----------------
+// NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const columns = allStudentsDataColumns.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
+
+export const allStudentsDataColumns = [
+//   { 
+//     field: 'id', 
+//     headerName: 'ID',
+//     // flex: 1, 
+//     maxWidth: 10 
+// },
+  { 
+    
+    field: 'studentNo', 
+    headerName: 'Student Number',
+    flex: 1, 
+    minWidth: 10 
+},
+{
+  field: 'photo', 
+  headerName: 'Photo',
+  flex: 1,
+  maxWidth: 90,
+  // editable: true,
+  renderCell: params => {
+    return (
+      <div className="imgFirstname">
+        <Avatar src="/broken-image.jpg" />
+        <div>{params.row.firstName}</div>
+      </div>
+    )
+  }
+},
+  { 
+    
+    field: 'fullName',
+    headerName: 'Full name',
+    flex: 1, 
+    minWidth: 100 
+  },
+  {
+    field: 'gender',
+    headerName: 'Gender',
+    flex: 1,
+    maxWidth: 90,
+    // editable: true,
+  },
+  {
+    field: 'sponsor',
+    headerName: 'Sponsor Name',
+    flex: 1,
+    minWidth: 100,
+    // editable: true,
+  },
+  {
+    field: 'dob',
+    headerName: 'Date of Birth',
+    // type: 'number',
+    flex: 1,
+    minWidth: 60,
+    // editable: true,
+  },
+  {
+    field: 'mobile',
+    headerName: 'Mobile No',
+    flex: 1,
+    minWidth: 100,
+    // editable: true,
+  },
+  {
+    field: 'course',
+    headerName: 'Course',
+    flex: 1,
+    minWidth: 180,
+    // editable: true,
+  },
+  {
+    field: 'email',
+    headerName: 'Email Address',
+    // type: 'number',
+    flex: 1,
+    minWidth: 120,
+    // editable: true,
+  },
+  {
+    field: 'year',
+    headerName: 'Year',
+    // type: 'number',
+    flex: 1,
+    maxWidth: 80,
+    // editable: true,
+  },
+  {
+    field: 'level',
+    headerName: 'Level',
+    // type: 'number',
+    flex: 1,
+    minWidth: 100,
+    // editable: true,
+  },
+];
+
+// NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const columns = allStudentsDataColumns.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
+export const allStudentsDataRows = [
+  { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+    { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2037310',
+    photo: 'avatar',
+    fullName: 'Daniel Will',
+    gender: 'Male',
+    sponsor: 'David Will',
+    dob: '10/03/1995',
+    mobile: '+447451170092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '3',
+    level: 'Under Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+  { 
+    id: uuidv4(),
+    studentNo:'#2137275',
+    photo: 'avatar',
+    fullName: 'Larry James',
+    gender: 'Male',
+    sponsor: 'Samuel James',
+    dob: '14/05/1990',
+    mobile: '+447641165092',
+    course: 'Computer Science', 
+    email: 'user@gmail.com', 
+    year: '6',
+    level: 'Post Graduate',
+  },
+];
+
+
+// ------------------- All Staff Data ----------------
+  // NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const columns = allStudentsDataColumns.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
+  
+  export const allStaffDataColumns = [
+    //   { 
+    //     field: 'id', 
+    //     headerName: 'ID',
+    //     // flex: 1, 
+    //     maxWidth: 10 
+    // },
+      { 
+        
+        field: 'staffNo', 
+        headerName: 'Staff Number',
+        flex: 1, 
+        maxWidth: 110 
+    },
+    {
+      field: 'photo', 
+      headerName: 'Photo',
+      flex: 1,
+      maxWidth: 55,
+      // editable: true,
+      renderCell: params => {
+        return (
+          <div className="imgFirstname">
+            <Avatar src="/broken-image.jpg" />
+            <div>{params.row.firstName}</div>
+          </div>
+        )
+      }
+    },
+      { 
+        
+        field: 'fullName',
+        headerName: 'Full name',
+        flex: 1, 
+        minWidth: 100 
+      },
+      {
+        field: 'gender',
+        headerName: 'Gender',
+        flex: 1,
+        maxWidth: 90,
+        // editable: true,
+      },
+      {
+        field: 'dob',
+        headerName: 'Date of Birth',
+        // type: 'number',
+        flex: 1,
+        minWidth: 60,
+        // editable: true,
+      },
+      {
+        field: 'mobile',
+        headerName: 'Mobile No',
+        flex: 1,
+        minWidth: 120,
+        // editable: true,
+      },
+      {
+        field: 'department',
+        headerName: 'Department',
+        flex: 1,
+        minWidth: 100,
+        // editable: true,
+      },
+      {
+        field: 'email',
+        headerName: 'Email Address',
+        // type: 'number',
+        flex: 1,
+        minWidth: 120,
+        // editable: true,
+      },
+      {
+        field: 'empDate',
+        headerName: 'Employment Date',
+        // type: 'number',
+        flex: 1,
+        minWidth: 80,
+        // editable: true,
+      },
+      {
+        field: 'level',
+        headerName: 'Level',
+        // type: 'number',
+        flex: 1,
+        minWidth: 100,
+        // editable: true,
+      },
+    ];
+
+    
+  // NOTE IF YOU ARE FETCHING THE DATA FROM A DATABASE JUST DO THIS: const columns = allStudentsDataColumns.map( row =>  row ); WITHOUT THE BELOW ARRAY OF OBJECTS.
+export const allStaffDataRows = [
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+  { 
+    id: uuidv4(),
+    staffNo:'#8768956',
+    photo: 'avatar',
+    fullName: 'Shayne Basley',
+    gender: 'Male',
+    // sponsor: 'David Will',
+    dob: '10/03/1985',
+    mobile: '+447451170092',
+    department: 'Administration', 
+    email: 'Staff@gmail.com', 
+    empDate: '10/03/2013',
+    level: 'Senior Staff',
+  },
+];
+
+// --------------- allCourses ---------------
+export const allCoursesDataColumns = [
+  { 
+    field: 'courseCode', 
+    headerName: 'Course Code',
+    flex: 1, 
+    minWidth: 80 
+  },
+  { 
+    field: 'courseTitle', 
+    headerName: 'Course Title',
+    flex: 1, 
+    minWidth: 80 
+  },
+  { 
+    field: 'faculty', 
+    headerName: 'Faculty',
+    flex: 1, 
+    minWidth: 80 
+  },
+  { 
+    field: 'department', 
+    headerName: 'Department',
+    flex: 1, 
+    minWidth: 80 
+  },
+  { 
+    field: 'level', 
+    headerName: 'Level',
+    flex: 1, 
+    minWidth: 80 
+  },
+];
+
+export const allCoursesDataRows = [
+  { 
+    id: uuidv4(),
+    courseCode: 'CSCM13', 
+    courseTitle: 'Critical Systems', 
+    faculty: 'Science & Engineering', 
+    department: 'Computer Science', 
+    level: 'Postgraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSC42', 
+  courseTitle: 'Systems Architectures', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'undergraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSCM98 ', 
+  courseTitle: 'Operating Systems & Arch', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'Postgraduate', 
+},
+  { 
+    id: uuidv4(),
+    courseCode: 'CSCM13', 
+    courseTitle: 'Critical Systems', 
+    faculty: 'Science & Engineering', 
+    department: 'Computer Science', 
+    level: 'Postgraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSC42', 
+  courseTitle: 'Systems Architectures', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'undergraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSCM98 ', 
+  courseTitle: 'Operating Systems & Arch', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'Postgraduate', 
+},
+  { 
+    id: uuidv4(),
+    courseCode: 'CSCM13', 
+    courseTitle: 'Critical Systems', 
+    faculty: 'Science & Engineering', 
+    department: 'Computer Science', 
+    level: 'Postgraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSC42', 
+  courseTitle: 'Systems Architectures', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'undergraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSCM98 ', 
+  courseTitle: 'Operating Systems & Arch', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'Postgraduate', 
+},
+  { 
+    id: uuidv4(),
+    courseCode: 'CSCM13', 
+    courseTitle: 'Critical Systems', 
+    faculty: 'Science & Engineering', 
+    department: 'Computer Science', 
+    level: 'Postgraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSC42', 
+  courseTitle: 'Systems Architectures', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'undergraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSCM98 ', 
+  courseTitle: 'Operating Systems & Arch', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'Postgraduate', 
+},
+  { 
+    id: uuidv4(),
+    courseCode: 'CSCM13', 
+    courseTitle: 'Critical Systems', 
+    faculty: 'Science & Engineering', 
+    department: 'Computer Science', 
+    level: 'Postgraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSC42', 
+  courseTitle: 'Systems Architectures', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'undergraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSCM98 ', 
+  courseTitle: 'Operating Systems & Arch', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'Postgraduate', 
+},
+  { 
+    id: uuidv4(),
+    courseCode: 'CSCM13', 
+    courseTitle: 'Critical Systems', 
+    faculty: 'Science & Engineering', 
+    department: 'Computer Science', 
+    level: 'Postgraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSC42', 
+  courseTitle: 'Systems Architectures', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'undergraduate', 
+},
+{ 
+  id: uuidv4(),
+  courseCode: 'CSCM98 ', 
+  courseTitle: 'Operating Systems & Arch', 
+  faculty: 'Science & Engineering', 
+  department: 'Computer Science', 
+  level: 'Postgraduate', 
+},
+];

@@ -1,4 +1,4 @@
-import "./studentDetails.scss";
+import "./lecturesDetails.scss";
 import StudentWidgets from "../studentWidgets/StudentWidgets";
 import StudentTodo from "../studentTodo/StudentTodo";
 import UserData from "../userData/UserData";
@@ -7,23 +7,23 @@ import Remarks from "../remarks/Remarks";
 import ExamResultsTable from "../examResultsTable/ExamResultsTable";
 import CourseWorkTable from "../courseWorkTable/CourseWorkTable";
 
-const StudentDetails = () => {
+const LecturesDetails = () => {
   return (
-    <div className='studentDetails'>
+    <div className='lecturesDetails'>
       <StudentWidgets/>
-      <div className="studentDetailsMain">
+      <div className="lecturesDetailsMain">
         <UserData profileData={ studentProfileData }  title='User Information'/>
         <StudentTodo title='Event Record'/>
       </div>
-      <div className="examResultsTableWrapper">
+      {/* <div className="examResultsTableWrapper">
         <ExamResultsTable/>
-      </div>
-      <div className="courseWorkWrapper">
+      </div> */}
+      <div className="paperWrapper">
         <CourseWorkTable/>
-        <Remarks title="Lecturers Remarks"/>
+        <Remarks title="Remarks"/>
       </div>
     </div>
   )
 }
 
-export default StudentDetails;
+export default LecturesDetails;

@@ -45,31 +45,6 @@
     display: flex;
     align-items: center;
     gap: 15px;
-
-    .socialTablePlatform {
-      flex: 1;
-      height: 360px;
-      background-color: #fff;
-      box-sizing: border-box;
-      padding-left: 20px;
-      // overflow: hidden;
-      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-      // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-    }
-
-    .socialTableDevice {
-      flex: 1;
-      height: 360px;
-      background-color: #fff;
-      box-sizing: border-box;
-      // padding-left: 20px;
-      // overflow: hidden;
-      box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
-      // box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
-    }
-
-
-
   }
 
   // -------- socialCompilation ---------
@@ -112,7 +87,7 @@
 // ------------ newApplicants Wrapper -----------
   .newApplicantsWrapper { // here is another container
     display: flex;
-    gap: 15px;
+    gap: 105px;
     height: 500px;
     // padding-bottom: 30px;
     box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);

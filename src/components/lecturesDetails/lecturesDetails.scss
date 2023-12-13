@@ -10,12 +10,12 @@ $myBackground: #fff !global;
 $myFont: Montserrat, sans-serif;
 $myFont2: MontserratLight, sans-serif;
 
-.studentDetails {
+.lecturesDetails {
   display: flex;
   flex-direction: column;
   gap: 15px;
 
-  .studentDetailsMain {
+  .lecturesDetailsMain {
     display: flex;
     gap: 15px;
 
@@ -25,7 +25,7 @@ $myFont2: MontserratLight, sans-serif;
     // }
   }
 
-  .courseWorkWrapper {
+  .paperWrapper {
     display:flex;
     gap: 15px;
   }

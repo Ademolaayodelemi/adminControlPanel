@@ -12,8 +12,8 @@ function App() {
         <Sidebar/>
       <div className="container">
     <Routes>
-      {/* <Route path="/" element={<Home />}/> */}
-      <Route path="/" element={<Management />}/>
+      <Route path="/" element={<Home />}/>
+      <Route path="/management" element={<Management />}/>
     </Routes>
       </div>
     </BrowserRouter>
